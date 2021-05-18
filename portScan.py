@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys, socket 
+import sys, socket, multiprocessing
 #importação das bibliotecas utilizadas
 
 host = socket.gethostbyname(sys.argv[1])
@@ -15,10 +15,13 @@ def portScan(host,porta):
     s.settimeout(1)
     if s.connect_ex((host,int(porta))) == 0:
         print("Porta " + porta + " aberta")
+#criação da função que define o port scan. "int(p)" garante que o valor da porta seja passada para inteiro e possa funcionar corretamente dentro da função "connect_ex()" 
 
-for p in portas.split(","):
-    portScan(host,p)
+if __name__ == '__main__':
+    jobs = []
+    for p in portas.split(","):
+        l = multiprocessing.Process(target=portScan, args=(host,p))
+        l.start()
 #caso o usuário digite mais de uma porta, separando por vírgula, o "split(",")" vai garantir -> 
 #-> que a string seja transformada em valores distintos
-#além disso, o "int(p)" garante que o valor da porta seja passada para inteiro e possa -> 
-#-> funcionar corretamente dentro da função "connect_ex()" 
+
