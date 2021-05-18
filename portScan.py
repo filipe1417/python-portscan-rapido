@@ -15,7 +15,8 @@ def portScan(host,porta):
     s.settimeout(1)
     if s.connect_ex((host,int(porta))) == 0:
         print("Porta " + porta + " aberta")
-#criação da função que define o port scan. "int(p)" garante que o valor da porta seja passada para inteiro e possa funcionar corretamente dentro da função "connect_ex()" 
+#criação da função que define o port scan. "int(p)" garante que o valor da porta seja passada para inteiro e possa funcionar corretamente dentro da função ->
+#-> "connect_ex()" 
 
 if __name__ == '__main__':
     jobs = []
