@@ -5,8 +5,8 @@ import sys, socket, multiprocessing, argparse
 parser = argparse.ArgumentParser()
 group = parser.add_mutually_exclusive_group()
 group.add_argument("-m","--mainports", help="Realiza um scan nas 100 principais portas", action="store_true")
-group.add_argument("-p","--ports", help="especifique quais as portas, separadas por vírgula")
-parser.add_argument("ip",help="digite o endereço ip ou domínio")
+group.add_argument("-p","--ports", help="Especifique as portas, separando por virgula")
+parser.add_argument("ip",help="Digite o endereço ip ou domínio")
 args = parser.parse_args() 
 
 host = socket.gethostbyname(args.ip)
