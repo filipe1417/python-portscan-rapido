@@ -6,7 +6,7 @@
   Primeiramente, por ser um arquivo em python, pode ser iníciado de algumas formas: 
   python portScan.py [ARGS]
   ou 
-  ./portScan.py [ARGS]  Nesse caso, deve-se conceder permissão de execução ao arquivo
+  ./portScan.py [ARGS]  Nesse último caso, deve-se conceder permissão de execução ao arquivo
   
   É possível acessar o menu de opções possíveis utilizando -h ou --help junto ao script, da seguinte forma:
   ./portScan.py -h ou ./portScan.py --help
