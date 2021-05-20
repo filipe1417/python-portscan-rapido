@@ -10,8 +10,7 @@
   
   É possível acessar o menu de opções possíveis utilizando -h ou --help junto ao script, da seguinte forma:
   ./portScan.py -h ou ./portScan.py --help
-  Obs: o mesmo vale para executar o script utilizando "python"
-  Assim, será possível perceber a seguinte saída:
+  Obs: o mesmo vale para executar o script utilizando "python". Assim, será possível perceber a seguinte saída:
   
   ![Captura de tela de 2021-05-19 22-57-56](https://user-images.githubusercontent.com/62412445/118907347-bc43f280-b8f5-11eb-9a06-460cb3c288dc.png)
   
