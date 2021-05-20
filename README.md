@@ -33,9 +33,9 @@
   
   ## Implementações futuras
   
-  Código comentado e explicação completa estará disponível no site do repositório
+  Código comentado e explicação completa disponível no site do repositório
   
-  Analisar os serviçoes que estão sendo executados nas portas (banner grabbing)
+  Analisar os serviços que estão sendo executados nas portas (banner grabbing)
 
   
   
