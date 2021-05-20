@@ -12,7 +12,8 @@
   ./portScan.py -h ou ./portScan.py --help
   Obs: o mesmo vale para executar o script utilizando "python"
   Assim, será possível perceber a seguinte saída:
-  ![Captura de tela de 2021-05-19 22-56-03](https://user-images.githubusercontent.com/62412445/118907274-9b7b9d00-b8f5-11eb-9a9d-9ae8b74a6885.png)
+  ![Captura de tela de 2021-05-19 22-57-56](https://user-images.githubusercontent.com/62412445/118907347-bc43f280-b8f5-11eb-9a06-460cb3c288dc.png)
+
 
   
   
