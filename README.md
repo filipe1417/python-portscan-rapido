@@ -21,8 +21,11 @@
   ## Exemplos
   
   ./portScan.py -m site.com   Scan das 100 principais portas no site "site.com"
+  
   ./portScan.py -m 192.168.0.12   Scan das 100 principais portas no IP "192.168.0.12"
+  
   ./portScan.py -p 21,22,80 site.com    Scan nas portas 21,22 e 80 no site "site.com"
+  
   python portScan.py -p 80 192.168.0.12   Scan na porta 80 no IP "192.168.0.12"
 
   
