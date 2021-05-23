@@ -44,5 +44,3 @@ if __name__ == "__main__":
 
     main()
     #execução da função main
-
-
