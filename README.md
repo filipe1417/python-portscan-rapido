@@ -4,6 +4,7 @@
 
 ## Como utilizar o script:
   OBS: Todos os seguintes exemplos também se aplicam à "portScanComentado". O código de ambos é o mesmo, mas como definido, um deles comentado.
+  
   Primeiramente, por ser um arquivo em python, pode ser iníciado de algumas formas: 
   python portScan.py [ARGS]
   ou 
