@@ -8,16 +8,19 @@ group.add_argument("-m","--mainports", help="Realiza um scan nas 100 principais 
 group.add_argument("-p","--ports", help="Especifique as portas, separando por virgula")
 parser.add_argument("ip",help="Digite o endereço ip ou domínio")
 args = parser.parse_args() 
+#criação de argumentos para uso do script
 
 def portScan(host, porta):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(1)
     if s.connect_ex((host,int(porta))) == 0:
         print("Porta " + porta + " aberta")
+#função que realiza a validação nas portas
 
 def multiProcess(host, portScan, p):
         l = multiprocessing.Process(target=portScan, args=(host,str(p)))
         l.start()
+#função que inicia o multiprocessing
 
 def main():
     try:
@@ -36,7 +39,9 @@ def main():
         
         for p in portas.split(","):
             multiProcess(host, portScan, p)
+#função main
 
 main()
+#execução da função main
 
 
