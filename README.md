@@ -33,8 +33,6 @@
   
   ## Implementações futuras
   
-  Código comentado e explicação completa disponível no site do repositório
-  
   Analisar os serviços que estão sendo executados nas portas (banner grabbing)
 
   
