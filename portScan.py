@@ -19,7 +19,6 @@ def multiProcess(host, portScan, p):
         l = multiprocessing.Process(target=portScan, args=(host,str(p)))
         l.start()
 
-
 def main():
     try:
         host = socket.gethostbyname(args.ip)
