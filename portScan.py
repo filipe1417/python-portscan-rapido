@@ -44,3 +44,4 @@ if __name__ == "__main__":
 
     main()
     #execução da função main
+#o que está dentro de "if __name__ = "__main__" não será executado caso esse script seja importado, ou seja, caso o script não seja executado diretamente
