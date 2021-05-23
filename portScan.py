@@ -37,7 +37,6 @@ if __name__ == "__main__":
 
         else:
             portas = args.ports
-            
             for p in portas.split(","):
                 multiProcess(host, portScan, p)
     #definição da função main
