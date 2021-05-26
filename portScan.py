@@ -12,12 +12,8 @@ args = parser.parse_args()
 def portScan(host, porta):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(1)
-    try:
-        if s.connect_ex((host,int(porta))) == 0:
-            print("Porta " + porta + " aberta")
-    except ValueError:
-        print("Um erro ocorreu. Verificar se o modelo de digitação das portas confere com o existente no --help")
-        sys.exit()
+    if s.connect_ex((host,int(porta))) == 0:
+        print("Porta " + porta + " aberta")
 
 def multiProcess(host, portScan, p):
         l = multiprocessing.Process(target=portScan, args=(host,str(p)))
@@ -37,19 +33,8 @@ def main():
 
     else:
         portas = args.ports
-        
-        try:
-            if "," in portas:
-                for p in portas.split(","):
-                    multiProcess(host, portScan, p)
-            elif "-" in portas:
-                portaInicial, portaFinal = portas.split("-")
-                for p in range (int(portaInicial), int(portaFinal)+1):
-                    multiProcess(host, portScan, p)
-            else:
-                print("Um erro ocorreu. Checar a digitação das portas")
-        except ValueError:
-            print("Um erro ocorreu. Verificar se o modelo de digitação das portas confere com o existente no --help")
+        for p in portas.split(","):
+            multiProcess(host, portScan, p)
             
 if __name__ == "__main__":
     main()
