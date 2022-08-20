@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 
 import sys, socket, multiprocessing, argparse
-from constantes import portasPrincipais
+from constantes import PORTAS_PRINCIPAIS
 
 
 
-def portScan(host, porta):
+def port_scan(host, porta):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(1)
     if s.connect_ex((host,int(porta))) == 0:
-        print("Porta " + porta + " aberta")
+        print(f"Porta {porta} aberta")
 
 
-def multiProcess(host, portScan, p):
-        l = multiprocessing.Process(target=portScan, args=(host,str(p)))
+def multi_process(host, port_scan, porta):
+        l = multiprocessing.Process(target=port_scan, args=(host,str(porta)))
         l.start()
 
 
@@ -33,13 +33,16 @@ def main():
         sys.exit(1)
 
     if args.mainports:
-        portas = portasPrincipais
+        portas = PORTAS_PRINCIPAIS
         for p in portas:
-            multiProcess(host, portScan, p)
-    else:
+            multi_process(host, port_scan, p)
+    elif args.ports:
         portas = args.ports
         for p in portas.split(","):
-            multiProcess(host, portScan, p)
+            multi_process(host, port_scan, p)
+    else:
+        print("ERRO: cheque se os argumentos estão corretos")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
