@@ -9,7 +9,7 @@ def port_scan(host, porta):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.settimeout(1)
     if s.connect_ex((host,int(porta))) == 0:
-        print(f"Porta {porta} aberta")
+        print(f"Porta {porta} [TCP] aberta")
 
 
 def multi_process(host, port_scan, porta):
